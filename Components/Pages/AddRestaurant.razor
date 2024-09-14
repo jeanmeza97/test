@@ -1,0 +1,94 @@
+﻿@page "/Registro" 
+@using Localizate.Models
+@using Localizate.Services.MongoService
+@using System.Text.RegularExpressions
+@using System.ComponentModel.DataAnnotations
+
+<MudGrid>
+    <MudItem xs="12" sm="7">
+        <PageTitle>Registro Comercios</PageTitle>
+
+        <h1>Registrar Restuarante</h1>
+        <MudPaper Class="pa-4">
+            <MudForm @ref="form" @bind-IsValid="@success" @bind-Errors="@errors">
+
+                <MudTextField @bind-Value="_restaurant.Name" T="string" Label="Nombre" Variant="Variant.Text" Required="true" RequiredError="El nombre es requerido!"/>
+                <MudTextField @bind-Value="_restaurant.Email" T="string" Label="Correo" Required="true" RequiredError="El correo es requerido!"
+                              Validation="@(new EmailAddressAttribute() { ErrorMessage = "El correo ingresado es invalido" })"/>
+                <MudTextField @bind-Value="_restaurant.Password" T="string" Label="Password" HelperText="Escoje una contrasena fuerte" @ref="pwField1"
+                              InputType="InputType.Password"
+                              Validation="@(new Func<string, IEnumerable<string>>(PasswordStrength))" Required="true"
+                              RequiredError="La contrasena es requerida!"/>
+                <MudTextField T="string"
+                              Label="Password" HelperText="Reite la contrasena" InputType="InputType.Password"
+                              Validation="@(new Func<string, string>(PasswordMatch))"/>
+                <MudTextField @bind-Value="_restaurant.Description" Label="Descripcion del Restaurante" Variant="Variant.Text"></MudTextField>
+                <MudTextField @bind-Value="_restaurant.Phone" Label="Numero de telefono" Variant="Variant.Text"></MudTextField>
+                <MudTextField @bind-Value="_restaurant.Address" Label="Direccion" Variant="Variant.Text"></MudTextField>
+                </MudForm>
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick=@SaveRestaurant>Insertar Restaurante</MudButton>
+            </MudPaper>
+    </MudItem>
+</MudGrid>
+
+
+
+
+
+
+
+@* Aqui se bindea la propiedad Description del objeto _restaurant, esto mejora mas adelante la insercion a la base de datos *@
+@* porque se inserta el objeto completo y no propiedad por propiedad. *@
+
+
+
+
+@code {
+            
+     // Form
+    private Restaurant _restaurant = new (); //Objeto para bindearle las propiedades con los elementos del formulario.
+    private int currentCount = 0;
+    private IMongoService _mongoService = new MongoService(); //Asi normalmente no se hace, pero es para facilitar las cosas
+    
+    //Este metodo se ejecuta siempre que se llama al boton
+    private void SaveRestaurant()
+    {
+        _mongoService.TestDbConnection(); //Esto solo prueba si hay conection a la base de datos, se puede quitar una vez que este correctamente 
+        //Pero lo ideal es hacerlo bindeando el objeto, como en el mudtextfield de la descripcion
+        _mongoService.InsertRestaurant(_restaurant);
+        var result = _mongoService.GetRestaurants();
+        _restaurant = new();
+    }
+    
+    
+    // FORM
+
+bool success;
+string[] errors = { };
+MudTextField<string> pwField1;
+MudForm form;
+
+private IEnumerable<string> PasswordStrength(string pw)
+{
+if (string.IsNullOrWhiteSpace(pw))
+{
+yield return "Password is required!";
+yield break;
+}
+if (pw.Length < 8)
+yield return "Password must be at least of length 8";
+if (!Regex.IsMatch(pw, @"[A-Z]"))
+yield return "Password must contain at least one capital letter";
+if (!Regex.IsMatch(pw, @"[a-z]"))
+yield return "Password must contain at least one lowercase letter";
+if (!Regex.IsMatch(pw, @"[0-9]"))
+yield return "Password must contain at least one digit";
+}
+
+private string PasswordMatch(string arg)
+{
+if (pwField1.Value != arg)
+return "Passwords don't match";
+return null;
+}
+}

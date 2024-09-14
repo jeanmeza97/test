@@ -1,0 +1,52 @@
+﻿@using MudBlazor
+@inherits LayoutComponentBase
+
+<MudThemeProvider />
+
+<MudLayout>
+    <MudAppBar Elevation="1">
+        <MudText Typo="Typo.h5" Class="ml-3">Localizate</MudText>
+        <MudSpacer/>
+
+        <!-- Buttons to be displayed on larger screens -->
+        <MudButton Variant="Variant.Text" Class="d-none d-md-inline">Inicio</MudButton>
+        <MudButton Variant="Variant.Text" Class="d-none d-md-inline">Nuestros lugares</MudButton>
+        <MudButton Variant="Variant.Text" Class="d-none d-md-inline">Cual es tu ubicacion</MudButton>
+        <MudButton Variant="Variant.Text" Class="d-none d-md-inline">Contacto</MudButton>
+        <MudButton Variant="Variant.Text" Class="d-none d-md-inline">Registro</MudButton>
+        <MudButton Variant="Variant.Text" Class="d-none d-md-inline">Iniciar</MudButton>
+
+        <!-- Hamburger menu button shown only on small screens and aligned to the right -->
+        <MudIconButton
+            Edge="Edge.End"
+            OnClick="ToggleDrawer"
+            Class="d-md-none mr-2">
+            <MudIcon Icon="@Icons.Material.Filled.Menu" />
+        </MudIconButton>
+    </MudAppBar>
+
+    <!-- Drawer menu for small screens, anchored to the right side -->
+    <MudDrawer @bind-Open="_drawerOpen" Anchor="Anchor.End" ClipMode="DrawerClipMode.Always" Variant="DrawerVariant.Temporary">
+        <MudNavMenu>
+            <MudNavLink Href="/">Inicio</MudNavLink>
+            <MudNavLink Href="/lugares">Nuestros lugares</MudNavLink>
+            <MudNavLink Href="/ubicacion">Cual es tu ubicacion</MudNavLink>
+            <MudNavLink Href="/contacto">Contacto</MudNavLink>
+            <MudNavLink Href="/registro">Registro</MudNavLink>
+            <MudNavLink Href="/iniciar">Iniciar</MudNavLink>
+        </MudNavMenu>
+    </MudDrawer>
+
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>
+
+@code {
+private bool _drawerOpen = false;
+
+private void ToggleDrawer()
+{
+_drawerOpen = !_drawerOpen;
+}
+}

@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|c:\\users\\jeanm\\desktop\\localizate\\localizate\\components\\pages\\form.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|solutionrelative:components\\pages\\form.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|c:\\users\\jeanm\\desktop\\localizate\\localizate\\components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|solutionrelative:components\\pages\\home.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|c:\\users\\jeanm\\desktop\\localizate\\localizate\\components\\pages\\addrestaurant.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|solutionrelative:components\\pages\\addrestaurant.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|c:\\users\\jeanm\\desktop\\localizate\\localizate\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|c:\\users\\jeanm\\desktop\\localizate\\localizate\\localizate.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{C9EEC563-7153-4111-9E67-E06CDAB53BDA}|Localizate.csproj|solutionrelative:localizate.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form.razor",
+              "DocumentMoniker": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Components\\Pages\\Form.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Form.razor",
+              "ToolTip": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Components\\Pages\\Form.razor",
+              "RelativeToolTip": "Components\\Pages\\Form.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-14T00:02:54.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AddRestaurant.razor",
+              "DocumentMoniker": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Components\\Pages\\AddRestaurant.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\AddRestaurant.razor",
+              "ToolTip": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Components\\Pages\\AddRestaurant.razor",
+              "RelativeToolTip": "Components\\Pages\\AddRestaurant.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T23:52:10.482Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Home.razor",
+              "DocumentMoniker": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Components\\Pages\\Home.razor",
+              "RelativeDocumentMoniker": "Components\\Pages\\Home.razor",
+              "ToolTip": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Components\\Pages\\Home.razor",
+              "RelativeToolTip": "Components\\Pages\\Home.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-13T23:51:32.078Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Localizate.csproj",
+              "DocumentMoniker": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Localizate.csproj",
+              "RelativeDocumentMoniker": "Localizate.csproj",
+              "ToolTip": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Localizate.csproj",
+              "RelativeToolTip": "Localizate.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-11T14:55:40.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Jeanm\\Desktop\\Localizate\\Localizate\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-11T04:10:18.93Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
